@@ -1,13 +1,13 @@
 
-const Button = (props) => {
+const Button = ({text, color}) => {
 const onClick = (e) => {
 console.log('this is my on click event from button');
 }
 
     return (
      <button className='btn' 
-            style= {{backgroundColor: props.color}} 
-            onClick= {onClick}>  {props.text}  
+            style= {{backgroundColor: color}} 
+            onClick= {onClick}>  {text}  
     </button>
             )
                 }
