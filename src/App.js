@@ -3,6 +3,7 @@ import Header from './Components/Header';
 import Button from './Components/Button';
 import Tasks from './Components/Tasks';
 import { useState } from "react";
+import Form from './Components/Form';
 
 
 function App() {
@@ -15,25 +16,28 @@ function App() {
             id: 1,
             text: 'Doctors appoiment' ,
             timing: 'November 8th at 2:20 pm',
-            reminder: true
+            
         },
         {
             id: 2,
             text:'University lecture',
             timing: 'Everyday from 11-15',
-            reminder: true
+            
         },
         {
             id: 3,
             text: 'Dinner at home',
             timing: 'November 5th at 6pm',
-            reminder: false
+      
         }
     ] )
 
   return (
     <div className="container">
       <Header title= 'Task Tracker'/>
+      <Form/>
+      <Button color='green' text='Add'/>
+     
       <Tasks tasks= {tasks} />  {/* setting tasks(a prop) equal to {tasks}(actual data), in order to send this props down to the component Tasks */}
      
     </div>
